@@ -1,0 +1,27 @@
+{
+  "name": "create-epic-remark",
+  "version": "0.1.0",
+  "description": "CLI tool to scaffold projects using epic-remark examples",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "bin": {
+    "create-epic-remark": "./index.js"
+  },
+  "keywords": [
+    "epic-remark",
+    "scaffolding",
+    "markdown",
+    "remark",
+    "cli"
+  ],
+  "author": "sandypockets",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^11.1.0"
+  }
+}

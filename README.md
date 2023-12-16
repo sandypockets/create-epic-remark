@@ -1,0 +1,2 @@
+# `create-epic-remark`
+`create-epic-remark` is a CLI tool for scaffolding examples from the `epic-remark` repository. It is designed to make starting a new project with `epic-remark` as easy as possible, so you can focus on writing content, and not on set up.
