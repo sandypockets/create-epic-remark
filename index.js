@@ -3,13 +3,15 @@
 const { program } = require('commander');
 const { execSync } = require('child_process');
 
-program
-  .option('--example <type>', 'Specify the example to scaffold (next-tailwind, or nuxt-tailwind)');
+program.option('--example <type>', 'Specify the example to scaffold (next-tailwind, or nuxt-tailwind)');
 
-program.addHelpText('after', `
+program.addHelpText(
+  'after',
+  `
 Examples:
   $ create-epic-remark --example next-tailwind
-  $ create-epic-remark --example nuxt-tailwind`);
+  $ create-epic-remark --example nuxt-tailwind`
+);
 
 program.parse(process.argv);
 
