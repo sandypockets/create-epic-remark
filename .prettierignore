@@ -1,0 +1,13 @@
+dist/
+node_modules/
+.env
+*.md
+.cache/
+*.log
+*.tmp
+.git/
+.github/
+.vscode/
+.idea/
+package-lock.json
+package.json
