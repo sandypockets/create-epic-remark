@@ -4,3 +4,5 @@ node_modules
 CONTRIBUTING.md
 CODE_OF_CONDUCT.md
 .github/
+.prettierrc
+.prettierignore
