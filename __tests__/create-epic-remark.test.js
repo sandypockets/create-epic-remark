@@ -9,10 +9,10 @@ describe('create-epic-remark CLI', () => {
 
   it('should display an error if no example is specified', () => {
     try {
-      execSync('node ./index.js');
+      execSync('node ./index.js --example');
     } catch (error) {
       const errorOutput = error.stderr.toString();
-      expect(errorOutput).toContain('Please specify an example to scaffold.');
+      expect(errorOutput).toContain("error: option '--example <type>' argument missing");
     }
   });
 
@@ -21,17 +21,21 @@ describe('create-epic-remark CLI', () => {
       execSync('node ./index.js --example invalidExample');
     } catch (error) {
       const errorOutput = error.stderr.toString();
-      expect(errorOutput).toContain("Example 'invalidExample' not found.");
+      expect(errorOutput).toContain("Invalid example: 'invalidExample'. Valid examples are");
     }
   });
 
-  // Uncomment when epic-remark is public
-  // it('should successfully create a project for a valid example', () => {
-  //   const validExample = 'next-tailwind';
-  //   execSync(`node ./index.js --example ${validExample}`);
-  //   const projectDir = './my-epic-remark-project';
-  //   expect(fs.existsSync(projectDir)).toBe(true);
-  //
-  //   fs.rmdirSync(projectDir, { recursive: true });
-  // });
+  it('should display the version information', () => {
+    const output = execSync('node ./index.js --version').toString();
+    expect(output.trim()).toBe('0.1.5');
+  });
+
+  it('should display an error for an invalid flag', () => {
+    try {
+      execSync('node ./index.js --invalidFlag');
+    } catch (error) {
+      const errorOutput = error.stderr.toString();
+      expect(errorOutput).toContain("error: unknown option '--invalidFlag'");
+    }
+  });
 });
