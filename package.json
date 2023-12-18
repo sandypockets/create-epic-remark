@@ -1,6 +1,6 @@
 {
   "name": "create-epic-remark",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "CLI tool to scaffold projects using epic-remark examples",
   "main": "index.js",
   "type": "module",
