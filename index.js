@@ -2,15 +2,21 @@
 
 import { program } from 'commander';
 import { execSync } from 'child_process';
+import { readFileSync } from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 import inquirer from 'inquirer';
 import chalk from 'chalk';
 import ora from 'ora';
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const packageJsonPath = path.join(__dirname, 'package.json');
+const packageJson = JSON.parse(readFileSync(packageJsonPath, 'utf8'));
+
 program
   .name('create-epic-remark')
   .description('CLI to scaffold Epic Remark projects with TailwindCSS integration')
-  .version('0.2.3')
+  .version(packageJson.version)
   .option('--example <type>', 'Specify the example to scaffold (next-tailwind, or nuxt-tailwind)')
   .helpOption('-h, --help', 'Display help for command')
   .addHelpText(
