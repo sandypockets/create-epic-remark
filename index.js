@@ -10,7 +10,7 @@ import ora from 'ora';
 program
   .name('create-epic-remark')
   .description('CLI to scaffold Epic Remark projects with TailwindCSS integration')
-  .version('0.2.2')
+  .version('0.2.3')
   .option('--example <type>', 'Specify the example to scaffold (next-tailwind, or nuxt-tailwind)')
   .helpOption('-h, --help', 'Display help for command')
   .addHelpText(

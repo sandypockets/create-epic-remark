@@ -27,7 +27,7 @@ describe('create-epic-remark CLI', () => {
 
   it('should display the version information', () => {
     const output = execSync('node ./index.js --version').toString();
-    expect(output.trim()).toBe('0.1.5');
+    expect(output.trim()).toBe('0.2.3');
   });
 
   it('should display an error for an invalid flag', () => {
