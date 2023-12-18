@@ -1,4 +1,9 @@
 const { execSync } = require('child_process');
+const { readFileSync } = require('fs')
+const path = require('path');
+
+const packageJsonPath = path.join(__dirname, '../package.json');
+const packageJson = JSON.parse(readFileSync(packageJsonPath, 'utf8'));
 
 describe('create-epic-remark CLI', () => {
   it('should display the help information', () => {
@@ -27,7 +32,7 @@ describe('create-epic-remark CLI', () => {
 
   it('should display the version information', () => {
     const output = execSync('node ./index.js --version').toString();
-    expect(output.trim()).toBe('0.2.3');
+    expect(output.trim()).toBe(packageJson.version);
   });
 
   it('should display an error for an invalid flag', () => {
