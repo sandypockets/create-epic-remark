@@ -6,6 +6,7 @@
 
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/create-epic-remark)
 ![npm bundle size](https://img.shields.io/bundlephobia/min/create-epic-remark)
+![npm](https://img.shields.io/npm/v/create-epic-remark)
 ![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/sandypockets/create-epic-remark/ci.yml)
 ![GitHub issues](https://img.shields.io/github/issues/sandypockets/create-epic-remark)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/sandypockets/create-epic-remark)
